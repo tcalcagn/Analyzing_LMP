@@ -936,7 +936,7 @@ ggplot(internodal_spread[order(date)], aes(x = month_name, y = spread_ratio_erco
   theme_minimal()
 ```
 ```{r}
-#34 Larger values indicate a higher difference in the DoD change in LMP in Chicago vs Corpus Christi. We want tighter spreads to help [fill in here] and this in turn impacts energy transmission and storage by [fill in here]
+#34 Larger values indicate a higher difference in the DoD change in LMP in Chicago vs Corpus Christi. We want tighter spreads to help improve market efficiency and reduce arbitrage opportunities and this in turn impacts energy transmission and storage by lowering the need for costly infrastructure expansion and encouraging more optimized dispatch and utilization of existing assets.
 ```
 
 
@@ -952,7 +952,11 @@ print(count4)
 
 ```
 ```{r}
-#35. I have no idea how to interpret this honestly
+#35. Between 2021 and 2023, the spread_ratio (day-over-day change in hourly Day-Ahead Locational Marginal Prices [DA LMP] between Chicago and Milwaukee) exceeded 1 on 8,860 hours, while the spread_ratio_ercot (analogous spread between Chicago and Corpus Christi, TX) exceeded 1 on 6,082 hours.
+
+This indicates that Chicago-Milwaukee price deviations were more frequent and/or more volatile compared to those between Chicago and Corpus Christi during this period. Since Milwaukee and Chicago are in closer geographic and market proximity (both within MISO), higher frequency of spread_ratio > 1 suggests that localized grid constraints, weather patterns, or demand variations caused more frequent shifts in LMP between these neighboring hubs.
+
+In contrast, the lower frequency of spread_ratio_ercot > 1 implies that the inter-market differences (MISO vs ERCOT) produced fewer but possibly larger or more structural spreads, potentially driven by broader system-level factors like regional generation mix, transmission bottlenecks, or regulatory differences.
 ```
 
 ```{r}
